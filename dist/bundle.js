@@ -9659,11 +9659,17 @@ const prodArrs = [{
 }];
 
 class ButtonBuy extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+	constructor(props) {
+		super(props);
+		this.clickHandler = () => {
+			alert("Products add to cart");
+		};
+	}
 
 	render() {
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			"button",
-			{ className: "btn-buy" },
+			{ className: "btn-buy", onClick: this.clickHandler },
 			"buy now"
 		);
 	}
@@ -9828,7 +9834,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, "* {\r\n  box-sizing: border-box;\r\n  -webkit-box-sizing: border-box;\r\n  -moz-box-sizing: border-box;\r\n}\r\nbody{\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tfont-family: arial;\r\n\tfont-size: 16px;\r\n\tline-height: 1.2;\r\n}\r\nimg {\r\n\tmax-width: 100%;\r\n}\r\n.menuWrapper{\r\n\tbackground: red;\r\n}\r\n\r\n.products-wrapper {\r\n\tbackground-color: #f5f5f5;\r\n}\r\n.products-list {\r\n\tmax-width: 1200px;\r\n\tmargin: 0 auto;\r\n\tpadding-right: 15px;\r\n\tpadding-left: 15px;\r\n\tpadding-top: 50px;\r\n\ttext-align: center;\r\n}\r\n.products-item {\r\n\tdisplay: inline-block;\r\n\twidth: 250px;\r\n\tpadding: 5px;\r\n\tmargin: 0 3% 30px;\r\n\tborder: 1px solid #ddd;\r\n}\r\n.products-item img {\r\n\tdisplay: block;\r\n\tmargin-bottom: 10px;\r\n}\r\n.products-item a,\r\n.btn-buy {\r\n\t-webkit-transition: all .3s ease;\r\n\t-moz-transition: all .3s ease;\r\n\t-ms-transition: all .3s ease;\r\n\t-o-transition: all .3s ease;\r\n\ttransition: all .3s ease;\r\n}\r\n.products-item a {\r\n\tdisplay: block;\r\n\ttext-decoration: none;\r\n\tcolor: #111;\r\n}\r\n.products-item .name,\r\n.products-item .price {\r\n\tdisplay: block;\r\n\ttext-transform: uppercase;\r\n\tmargin-bottom: 10px;\r\n}\r\n.products-item a:hover {\r\n\tcolor: #23a1d1;\r\n}\r\n.products-item .price {\r\n\tdisplay: block;\r\n\tcolor: #ff5100;\r\n}\r\n.btn-buy {\r\n\tdisplay: inline-block;\r\n\twidth: 80%;\r\n\theight: 30px;\r\n\tbackground-color: #fff;\r\n\tmargin-bottom: 20px;\r\n\tborder: 1px solid #ccc;\r\n\ttext-transform: uppercase;\r\n\tcolor: #333;\r\n\tcursor: pointer;\r\n}\r\n.btn-buy:hover {\r\n\tbackground-color: #e6e6e6;\r\n}", ""]);
+exports.push([module.i, "* {\r\n  box-sizing: border-box;\r\n  -webkit-box-sizing: border-box;\r\n  -moz-box-sizing: border-box;\r\n}\r\nbody{\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tfont-family: arial;\r\n\tfont-size: 16px;\r\n\tline-height: 1.2;\r\n}\r\nimg {\r\n\tmax-width: 100%;\r\n}\r\nbutton {\r\n\toutline: none;\r\n}\r\n.menuWrapper{\r\n\tbackground: red;\r\n}\r\n\r\n.products-wrapper {\r\n\tbackground-color: #f5f5f5;\r\n}\r\n.products-list {\r\n\tmax-width: 1200px;\r\n\tmargin: 0 auto;\r\n\tpadding-right: 15px;\r\n\tpadding-left: 15px;\r\n\tpadding-top: 50px;\r\n\ttext-align: center;\r\n}\r\n.products-item {\r\n\tdisplay: inline-block;\r\n\twidth: 250px;\r\n\tpadding: 5px;\r\n\tmargin: 0 3% 30px;\r\n\tborder: 1px solid #ddd;\r\n}\r\n.products-item img {\r\n\tdisplay: block;\r\n\tmargin-bottom: 10px;\r\n}\r\n.products-item a,\r\n.btn-buy {\r\n\t-webkit-transition: all .3s ease;\r\n\t-moz-transition: all .3s ease;\r\n\t-ms-transition: all .3s ease;\r\n\t-o-transition: all .3s ease;\r\n\ttransition: all .3s ease;\r\n}\r\n.products-item a {\r\n\tdisplay: block;\r\n\ttext-decoration: none;\r\n\tcolor: #111;\r\n}\r\n.products-item .name,\r\n.products-item .price {\r\n\tdisplay: block;\r\n\ttext-transform: uppercase;\r\n\tmargin-bottom: 10px;\r\n}\r\n.products-item a:hover {\r\n\tcolor: #23a1d1;\r\n}\r\n.products-item .price {\r\n\tdisplay: block;\r\n\tcolor: #ff5100;\r\n}\r\n.btn-buy {\r\n\tdisplay: inline-block;\r\n\twidth: 80%;\r\n\theight: 30px;\r\n\tbackground-color: #fff;\r\n\tmargin-bottom: 20px;\r\n\tborder: 1px solid #ccc;\r\n\ttext-transform: uppercase;\r\n\tcolor: #333;\r\n\tcursor: pointer;\r\n}\r\n.btn-buy:hover {\r\n\tbackground-color: #e6e6e6;\r\n}", ""]);
 
 // exports
 
