@@ -23,10 +23,16 @@ const prodArrs = [
 ]
 
 class ButtonBuy extends React.Component{
+	constructor(props){
+		super(props);
+		this.clickHandler = () => {
+			alert("Products add to cart")
+		}
+	}
 
 	render(){
 		return(
-			<button className="btn-buy">{ "buy now" }</button>
+			<button className="btn-buy" onClick={this.clickHandler}>{ "buy now" }</button>
 		)
 	}
 }
