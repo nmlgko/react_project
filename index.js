@@ -1,9 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
-require ( "./style.css" );
+// require ( "./style.css" );
+import css from "./style_products.scss";
 import Menu from "./menu.js";
 // import Greeting from "./firstComponents.js";
 import Products from "./products.js"; 
+import {ModalWindow} from "./components/modal_window";
+
 
 
 
@@ -42,6 +45,10 @@ class Root extends React.Component{
 			<div>
 				<Menu structure={structure}/>
 				<Products />
+
+				<ModalWindow title="Hello!!!">
+					<h1>I'm Modal Window</h1>
+				</ModalWindow>
 			</div>
 		)
 	}

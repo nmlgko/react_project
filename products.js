@@ -3,22 +3,46 @@ import { render } from "react-dom";
 
 const prodArrs = [
 	{
+		category: "phones",
 		name: "prod1",
 		src: "http://lorempixel.com/400/200/animals/9/",
 		link: "/prod1",
 		price: "111 $"
 	},
 	{
+		category: "tabs",		
 		name: "prod2",
 		src: "http://lorempixel.com/400/200/animals/8/",
 		link: "/prod2",
 		price: "222 $"
 	},
 	{
+		category: "notes",		
 		name: "prod3",
 		src: "http://lorempixel.com/400/200/animals/7/",
 		link: "/prod3",
 		price: "3333 $"
+	},
+	{
+		category: "clocks",
+		name: "prod4",
+		src: "http://lorempixel.com/400/200/animals/9/",
+		link: "/prod1",
+		price: "4444 $"
+	},
+	{
+		category: "laptops",		
+		name: "prod5",
+		src: "http://lorempixel.com/400/200/animals/8/",
+		link: "/prod2",
+		price: "5 $"
+	},
+	{
+		category: "accessories",		
+		name: "prod6",
+		src: "http://lorempixel.com/400/200/animals/8/",
+		link: "/prod2",
+		price: "6666 $"
 	}
 ]
 
@@ -32,7 +56,7 @@ class ButtonBuy extends React.Component{
 
 	render(){
 		return(
-			<button className="btn-buy" onClick={this.clickHandler}>{ "buy now" }</button>
+			<button className="btn-buy" onClick={this.clickHandler}> buy now </button>
 		)
 	}
 }
@@ -40,13 +64,16 @@ class ButtonBuy extends React.Component{
 class ItemProduct extends React.Component{
 
 	render(){
+		const p = this.props;
+
 		return (
 			<div>
-				<a href={ this.props.link }>
-					<img src={ this.props.image } />
-					<span className="name">{ this.props.name }</span>
+				<a href="" className="name_cat">{ p.category }</a>
+				<a href={ p.link }>
+					<img src={ p.image } />
+					<span className="name">{ p.name }</span>
 				</a>
-				<strong className="price">{ this.props.price }</strong>
+				<strong className="price">{ p.price }</strong>
 				<ButtonBuy />
 			</div>
 		)
@@ -59,8 +86,10 @@ class ProductsList extends React.Component{
 		super(props);
 
 		this.mapper = ( item, index ) => {
+
 			return <li key = { index.toString() } className="products-item">
-				<ItemProduct					
+				<ItemProduct
+					category = { item.category }		
 					image = { item.src }
 					link = { item.link }
 					name = { item.name }
